@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}direccion{% endblock %}
+
+{% block body_class %}fondo-index{% endblock %}
+
+{% block content %}
+    <div class="contenedordir">
+        <div class="mapa-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d836.1217912967082!2d-71.6233884!3d-33.043639!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689e128f98dd6b9%3A0x3b2676285a278329!2sPlaza%20C%C3%ADvica!5e0!3m2!1ses-419!2scl!4v1721172840704!5m2!1ses-419!2scl" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>  
+        <div class="titulo-direccion">
+            <h1 >¿Cómo encontrarnos?</h1>
+            <ul>
+                <li><p>Plaza Cívica: Bellavista 410, Valparaíso</p></li>
+                <li><p>+569 9999 9999</p></li>
+                <li><p>Lunes a sabado: 9:00 a 19:00 Hrs.</p></li>
+                <li><p>Domingo: 9:00 a 14:00 Hrs.</p></li>     
+            </ul>
+            <p class="direccion-text" >Te invitamos a explorar nuestro puesto en la Plaza Cívica, 
+                donde encontrarás piezas únicas llenas de tradición y creatividad. 
+                Podrás también encontrar insumos naturales y tejidos artesanales.
+            </p>
+        </div>  
+    </div>
+{% endblock %}
