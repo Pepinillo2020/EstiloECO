@@ -11,11 +11,12 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Productos</a></li>
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="{% url 'productos' %}">Productos</a></li>
                 <li><a href="#">Contactanos</a></li>
                 <li><a href="#">Horario</a></li>
                 <li><a href="#">Mensajes</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
             </ul>
             <input type="search" placeholder="buscar">
         </nav>

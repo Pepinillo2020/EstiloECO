@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Productos
+{% endblock %}
+
+{% block content %}
+{% load humanize %}
+<section class="producto" id="producto">
+    <div class="producto-text">
+        <h2>{% if query %}Resultados de búsqueda para "{{ query }}"{% else %}Nuestros Productos{% endif %}</h2>
+    </div>
+    {% if request.user.is_superuser %}
+    <div>
+        <div style="text-align: center;">
+            <a href="{% url 'agregarProducto' %}"><button>Agregar Producto</button></a>
+        </div>
+    </div>
+    {% endif %}
+    <div class="menu-content">
+        {% for producto in productos %}
+        <div class="card">
+            <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}">
+            <div class="card-content">
+                <h3>{{ producto.nombre }}</h3>
+                <div class="desc-producto">
+                    <p>{{ producto.descripcion }}</p>
+                </div>
+                <p>{{ producto.categoria}}</p>
+                <p class="price">Precio: ${{ producto.precio|intcomma }}</p>
+                {% if request.user.is_superuser %}
+                    <a href="{% url 'editarProducto' producto.id %}">Editar Producto</a>
+                    <a href="{% url 'eliminarProducto' producto.id %}">Eliminar Producto</a>
+                {% endif %}
+            </div>
+        </div>
+        {% empty %}
+        <p>No se encontraron productos para la búsqueda "{{ query }}".</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

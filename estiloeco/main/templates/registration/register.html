@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Crear cuenta
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="container-registro">
+            <div class="container titulo-login-top">
+                <div class="titulo-div-login"><h1>Crear cuenta</h1></div>
+                <div class="container titulo-login"></div>
+            </div>
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <div>
+                    <button style="background-color: #a18052; border-color: #a18052;" type="submit" class="btn btn-primary btn-style btn-login">Registrarse</button>
+                </div>
+            </form>
+            <a href="{% url 'login' %}"><h1 class="texto-inf">Iniciar sesión</h1></a>
+        </div>
+    </div>
+{% endblock %}
