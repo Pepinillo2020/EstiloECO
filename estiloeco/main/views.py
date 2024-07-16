@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import user_passes_test
-from .models import Producto
+from .models import Producto, Categoria
 from django.contrib import messages
 from .forms import ProductoForm, CustomUserCreationForm
 from django.views.generic import View
@@ -80,3 +80,21 @@ def editarProducto(request, producto_id):
         form = ProductoForm(instance=producto)
     
     return render(request, 'editarProducto.html', {'form': form, 'producto': producto})
+
+def insumos(request):
+    categoria_insumos = Categoria.objects.get(nombre="insumos")
+    productos = Producto.objects.filter(categoria=categoria_insumos)
+    
+    return render(request, 'insumos.html', {'productos': productos})
+
+def manualidades(request):
+    categoria_manualidades = Categoria.objects.get(nombre="manualidades")
+    productos = Producto.objects.filter(categoria=categoria_manualidades)
+    
+    return render(request, 'manualidades.html', {'productos': productos})
+
+def textiles(request):
+    categoria_textiles = Categoria.objects.get(nombre="textiles")
+    productos = Producto.objects.filter(categoria=categoria_textiles)
+    
+    return render(request, 'textiles.html', {'productos': productos})
