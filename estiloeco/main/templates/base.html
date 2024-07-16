@@ -10,18 +10,18 @@
 <body>
     <header class="header">
         <div class="logo">
-            <img src=" {% static 'img/logo.png' %}" alt="Logo de la marca">
+            <img src=" {% static 'img/logo.png' %}"  alt="Logo de la marca"  >
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Contactanos</a></li>
-                <li><a href="#">Horario</a></li>
-                <li><a href="#">Mensajes</a></li> 
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="{% url 'productos' %}">Productos</a></li>
+                <li><a href="{% url 'contacto' %}">Contáctanos</a></li>
+                <li><a href="{% url 'horario' %}">Horario</a></li>
+                <li><a href="">Mensajes</a></li> 
             </ul>           
         </nav>
-        <a class="btn" href="#"><button>Iniciar Sesion</button></a>
+        <a class="btn" href="{% url 'login' %}"><button>Iniciar Sesion</button></a>
     </header>
 
    {% block content %}
@@ -49,19 +49,19 @@
 
           <ul class="menu">
             <li class="menu-elem">
-              <a href="" class="menu-icon"> Contáctanos </a>
+              <a href="{% url 'contacto' %}" class="menu-icon"> Contáctanos </a>
             </li>
             <li class="menu-elem">
-              <a href="" class="menu-icon"> Horarios</a>
+              <a href="{% url 'horario' %}" class="menu-icon"> Horarios</a>
             </li>
             <li class="menu-elem">
-              <a href="" class="menu-icon"> Nosotros </a>
+              <a href="{% url 'home' %}" class="menu-icon"> Nosotros </a>
             </li>
             <li class="menu-elem">
-              <a href="" class="menu-icon"> Dirección </a>
+              <a href="#" class="menu-icon"> Dirección </a>
             </li>
           </ul>
-          <p class="text">©Todos los derechos reservados. Ian Reyes/Victor Cornou/Ignacio Puelles/Benjamin Peñailillo. 2024 </p>
+          <p class="text">©Todos los derechos reservados. Ian Reyes/Victor Cornou/Ignacio Puelles/Benjamin Peñailillo. 2024. </p>
         </footer>
         <script
           type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
