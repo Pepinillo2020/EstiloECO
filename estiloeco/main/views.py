@@ -5,6 +5,7 @@ from django.contrib import messages
 from .forms import ProductoForm, CustomUserCreationForm, ContactoForm
 from django.views.generic import View
 from django.contrib.auth import logout, login
+from django.http import HttpResponseForbidden
 
 def superuser_required(user):
     return user.is_superuser
@@ -14,6 +15,9 @@ def home(request):
 
 def horario(request):
     return render(request, 'horario.html')
+
+def direccion(request):
+    return render(request, 'direccion.html')
 
 def register(request):
     if request.method == 'POST':
@@ -119,3 +123,28 @@ def textiles(request):
     productos = Producto.objects.filter(categoria=categoria_textiles)
     
     return render(request, 'textiles.html', {'productos': productos})
+
+@user_passes_test(superuser_required)
+def mensajes(request):
+    mensajes = Contacto.objects.all().order_by('-fecha_envio')
+    context = {
+        'mensajes': mensajes
+    }
+    return render(request, 'mensajes.html', context)
+
+@user_passes_test(superuser_required)
+def mensaje_detalle(request, mensaje_id):
+    mensaje = get_object_or_404(Contacto, id=mensaje_id)
+    context = {
+        'mensaje': mensaje
+    }
+    return render(request, 'mensaje_detalle.html', context)
+
+@user_passes_test(superuser_required)
+def eliminar_mensaje(request, mensaje_id):
+    if request.user.is_superuser:
+        mensaje = get_object_or_404(Contacto, id=mensaje_id)
+        mensaje.delete()
+        return redirect('mensajes')
+    else:
+        return HttpResponseForbidden()
