@@ -62,3 +62,119 @@ footer {
         margin-bottom: 1em;
     }
 }
+
+/*Producto*/
+@font-face{
+    font-family: "Merienda";
+    src: url('../resources/Merienda-VariableFont_wght.ttf') format('truetype'); 
+    font-weight: 600;
+}
+
+@font-face{
+    font-family: ABeeZee;
+    src: url('../resources/ABeeZee-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+.producto-text {
+    text-align: center; 
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.producto-text h2 {
+    color: #381715;
+    font-family: 'Merienda', cursive;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 32px; 
+}
+
+.main-text h2{
+    color: #381715;
+    font-family: 'Merienda', cursive;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 32px; 
+}
+
+.menu-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+    margin-left: 85px;
+    margin-right: 85px;
+    margin-bottom: 35px;
+}
+
+.card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 400px;
+}
+
+.card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-content {
+    padding: 1rem;
+    font-family: ABeezee;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.desc-producto{
+    width: 100%;
+    height: 100px;
+    overflow: auto;
+    background-color: #d6d4d318;
+    padding: 7px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: #555555;
+    margin-bottom: 0.5rem;
+}
+
+.card-content .price {
+    color: #7a3d3c;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-content a {
+    display: block;
+    text-align: center;
+    background-color: #7a3d3c;
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.card-content a:hover {
+    background-color: #5b2e2d;
+}
