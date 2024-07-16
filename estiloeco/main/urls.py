@@ -15,6 +15,8 @@ urlpatterns = [
     path('agregarProducto/', views.agregar_producto, name='agregarProducto'),
     path('eliminar/<int:producto_id>/', ProductoDeleteView.as_view(), name='eliminarProducto'),
     path('editar/<int:producto_id>/', views.editarProducto, name='editarProducto'),
+    path('contacto/', views.contacto, name='contacto'),
+    path('horario/', views.horario, name='horario'),
 ]
 
 if settings.DEBUG:

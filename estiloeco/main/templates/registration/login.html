@@ -19,12 +19,13 @@
                         
                         {{ form | crispy }}
                         
-                        <a href="{% url 'register' %}"><h1 class="texto-inf">Registrarse</h1></a>
+                        
 
                         <div>
-                            <button style="background-color: #a18052; border-color: #a18052;" type="submit" class="btn btn-primary btn-style btn-login">Iniciar sesión</button>
+                            <button type="submit" class="btn btn-primary btn-style btn-login">Iniciar sesión</button>
                         </div>
                         
                     </form>
+                    <a class="texto-inf" href="{% url 'register' %}"><h1>Registrarse</h1></a>
                 </div>
 {% endblock %}

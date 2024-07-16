@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import user_passes_test
-from .models import Producto, Categoria
+from .models import Producto, Categoria, Contacto
 from django.contrib import messages
-from .forms import ProductoForm, CustomUserCreationForm
+from .forms import ProductoForm, CustomUserCreationForm, ContactoForm
 from django.views.generic import View
 from django.contrib.auth import logout, login
 
@@ -11,6 +11,9 @@ def superuser_required(user):
 
 def home(request):
     return render(request, 'home.html')
+
+def horario(request):
+    return render(request, 'horario.html')
 
 def register(request):
     if request.method == 'POST':
@@ -26,6 +29,24 @@ def register(request):
 def exit(request):
     logout(request)
     return redirect(home)
+
+def contacto(request):
+    if request.method == 'POST':
+        contacto_form = ContactoForm(request.POST)
+        if contacto_form.is_valid():
+            contacto_form.save()
+            messages.success(request, '¡Recibimos tu mensaje! Gracias por comunicarte.')
+            return redirect('contacto')
+    else:
+        initial_data = {}
+        if request.user.is_authenticated:
+            initial_data = {
+                'nombre': request.user.get_full_name(),
+                'email': request.user.email,
+            }
+        contacto_form = ContactoForm(initial=initial_data)
+    
+    return render(request, 'contacto.html', {'form': contacto_form})
 
 def productos(request):
     productos = Producto.objects.all()
