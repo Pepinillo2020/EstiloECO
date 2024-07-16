@@ -64,6 +64,25 @@ footer {
 }
 
 /*Producto*/
+.btn-agregar{
+    background-color: #9370DB;;
+    font-size: 20px;
+    color: #ffffff;
+    border-radius: 0.5rem;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.btn-agregar:hover{
+    cursor: pointer;
+    background-color: #6d52a3;
+    transform: translateY(-3px);
+    transition: all 0.5s ease 0s;
+    transform: scale(1.1);
+}
+
 @font-face{
     font-family: "Merienda";
     src: url('../resources/Merienda-VariableFont_wght.ttf') format('truetype'); 
