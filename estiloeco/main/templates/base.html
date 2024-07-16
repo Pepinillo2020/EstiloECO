@@ -8,25 +8,70 @@
     <link rel="stylesheet" href="{% static 'css\style.css' %}">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="{% url 'home' %}">Inicio</a></li>
-                <li><a href="{% url 'productos' %}">Productos</a></li>
-                <li><a href="{% url 'contacto' %}">Contactanos</a></li>
-                <li><a href="{% url 'horario' %}">Horario</a></li>
-                <li><a href="#">Mensajes</a></li>
-                <li><a href="{% url 'login' %}">Login</a></li>
-            </ul>
-            <input type="search" placeholder="buscar">
-        </nav>
-    </header>
-    {% block content %}
-    {% endblock %}
-    <footer>
-        <div class="contact-info">
-            <p>Contáctanos | Dirección | Nosotros | Horario</p>
+    <header class="header">
+        <div class="logo">
+            <img src=" {% static 'img/logo.png' %}" alt="Logo de la marca">
         </div>
-        <p>&copy; Todos los derechos reservados. Ian Reyes/Victor Cornou/Ignacio Puelles/Benjamín Peñailillo, 2024</p>
-    </footer>
-</body>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Contactanos</a></li>
+                <li><a href="#">Horario</a></li>
+                <li><a href="#">Mensajes</a></li> 
+            </ul>           
+        </nav>
+        <a class="btn" href="#"><button>Iniciar Sesion</button></a>
+    </header>
+
+   {% block content %}
+    {% endblock %}
+
+   
+        <footer class="footer">
+          <ul class="social-icon">
+            <li class="icon-elem">
+              <a href="https://www.instagram.com/" class="icon">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+            <li class="icon-elem">
+              <a href="https://wa.me/56978397908" class="icon">
+                <ion-icon name="logo-whatsapp"></ion-icon>
+              </a>
+            </li>
+            <li class="icon-elem">
+              <a href="https://web.facebook.com/?_rdc=1&_rdr" class="icon">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="menu">
+            <li class="menu-elem">
+              <a href="" class="menu-icon"> Contáctanos </a>
+            </li>
+            <li class="menu-elem">
+              <a href="" class="menu-icon"> Horarios</a>
+            </li>
+            <li class="menu-elem">
+              <a href="" class="menu-icon"> Nosotros </a>
+            </li>
+            <li class="menu-elem">
+              <a href="" class="menu-icon"> Dirección </a>
+            </li>
+          </ul>
+          <p class="text">©Todos los derechos reservados. Ian Reyes/Victor Cornou/Ignacio Puelles/Benjamin Peñailillo. 2024 </p>
+        </footer>
+        <script
+          type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+          nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+        ></script> 
+
+
+</body>    
+</html>
+
+  
