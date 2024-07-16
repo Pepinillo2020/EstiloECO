@@ -118,6 +118,8 @@ footer {
     transition: transform 0.3s ease;
     width: 100%;
     max-width: 400px;
+    border-color: #9370DB;
+    border-style: groove;
 }
 
 .card img {
@@ -125,6 +127,11 @@ footer {
     height: 400px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
+    border-style: groove;
+    border-color: #9370DB;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
 }
 
 .card-content {
