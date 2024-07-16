@@ -20,8 +20,8 @@
                 <p>{{ producto.categoria}}</p>
                 <p class="price">Precio: ${{ producto.precio|intcomma }}</p>
                 {% if request.user.is_superuser %}
-                    <a href="{% url 'editarProducto' producto.id %}">Editar Producto</a>
-                    <a href="{% url 'eliminarProducto' producto.id %}">Eliminar Producto</a>
+                    <a href="{% url 'editarProducto' producto.id %}" style="background-color: #9370DB;">Editar Producto</a>
+                    <a href="{% url 'eliminarProducto' producto.id %}" style="background-color: #9370DB;">Eliminar Producto</a>
                 {% endif %}
             </div>
         </div>
