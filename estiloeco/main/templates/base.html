@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilo Eco</title>
+    <link rel="stylesheet" href="{% static 'css\style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Contactanos</a></li>
+                <li><a href="#">Horario</a></li>
+                <li><a href="#">Mensajes</a></li>
+            </ul>
+            <input type="search" placeholder="buscar">
+        </nav>
+    </header>
+    {% block content %}
+    {% endblock %}
+    <footer>
+        <div class="contact-info">
+            <p>Contáctanos | Dirección | Nosotros | Horario</p>
+        </div>
+        <p>&copy; Todos los derechos reservados. Ian Reyes/Victor Cornou/Ignacio Puelles/Benjamín Peñailillo, 2024</p>
+    </footer>
+</body>

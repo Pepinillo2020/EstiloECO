@@ -1,50 +1,27 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estilo Eco</title>
-    <link rel="stylesheet" href="{% static 'css\style.css' %}">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Contactanos</a></li>
-                <li><a href="#">Horario</a></li>
-                <li><a href="#">Mensajes</a></li>
-            </ul>
-            <input type="search" placeholder="buscar">
-        </nav>
-    </header>
+{% block content %}
+    
 
-    <section class="hero">
-        <h1>Bienvenido a Estilo Eco</h1>
-        <p>Lorem ipsum es simplemente el texto de relleno de las imprentas y archivos de texto...</p>
-    </section>
+<section class="hero">
+    <h1>Bienvenido a Estilo Eco</h1>
+    <p>Lorem ipsum es simplemente el texto de relleno de las imprentas y archivos de texto...</p>
+</section>
 
-    <section class="categories">
-        <h2>Categoría</h2>
-        <div class="category-grid">
-            <div class="category-item">Textiles</div>
-            <div class="category-item">Manualidades</div>
-            <div class="category-item">Insumos</div>
-        </div>
-    </section>
+<section class="categories">
+    <h2>Categoría</h2>
+    <div class="category-grid">
+        <div class="category-item">Textiles</div>
+        <div class="category-item">Manualidades</div>
+        <div class="category-item">Insumos</div>
+    </div>
+</section>
 
-    <section class="carousel">
-        <h2>Carrusel de Imágenes</h2>
-        <!-- Aquí puedes agregar un carrusel de imágenes -->
-    </section>
+<section class="carousel">
+    <h2>Carrusel de Imágenes</h2>
+    <!-- Aquí puedes agregar un carrusel de imágenes -->
+</section>
 
-    <footer>
-        <div class="contact-info">
-            <p>Contáctanos | Dirección | Nosotros | Horario</p>
-        </div>
-        <p>&copy; Todos los derechos reservados. Ian Reyes/Victor Cornou/Ignacio Puelles/Benjamín Peñailillo, 2024</p>
-    </footer>
-</body>
-</html>
+{% endblock %}
+
+
