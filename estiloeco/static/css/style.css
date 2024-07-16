@@ -596,14 +596,14 @@ body {
     border-radius: 8px;   
 }
 
-.container .header {
+.container .mensaje-header {
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
     
 }
 
-.container .header h2 {
+.container .mensaje-header h2 {
     color:  #9370DB;
     text-align: center;
     font-family: 'Merienda', cursive;
