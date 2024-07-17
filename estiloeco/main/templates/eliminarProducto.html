@@ -19,8 +19,8 @@
     <form method="post">
         {% csrf_token %}
         <div class="my-2">
-            <button type="submit" class="btn btn-danger">Eliminar</button>
-            <a href="{% url 'productos' %}" class="btn btn-secondary">Cancelar</a>
+            <button type="submit" class="btn" style="background-color: #dc3545; width: 100px">Eliminar</button>
+            <a href="{% url 'productos' %}" class="btn" style="background-color: #0000FF; width: 90px">Cancelar</a>
         </div>
     </form>
     </div>
