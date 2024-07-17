@@ -18,7 +18,9 @@
                 <li><a href="{% url 'productos' %}">Productos</a></li>
                 <li><a href="{% url 'contacto' %}">Contáctanos</a></li>
                 <li><a href="{% url 'horario' %}">Horario</a></li>
-                <li><a href="{% url 'mensajes' %}">Mensajes</a></li>
+                {% if request.user.is_superuser %}
+                  <li><a href="{% url 'mensajes' %}">Mensajes</a></li>
+                {% endif %}
             </ul>
         </nav>
         <form class="d-flex" method="get" action="{% url 'buscar_productos' %}">
@@ -65,7 +67,7 @@
               <a href="{% url 'home' %}" class="menu-icon"> Nosotros </a>
             </li>
             <li class="menu-elem">
-              <a href="#" class="menu-icon"> Dirección </a>
+              <a href="{% url 'direccion' %}" class="menu-icon"> Dirección </a>
             </li>
           </ul>
           <p class="text">©Todos los derechos reservados. Ian Reyes/Victor Cornou/Ignacio Puelles/Benjamin Peñailillo. 2024. </p>
