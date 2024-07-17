@@ -484,16 +484,16 @@ body {
 }
 
 .producto-text h2 {
-    color: #381715;
-    font-family: 'Merienda', cursive;
+    color: #9370DB;
+ 
     margin-bottom: 40px;
     text-align: center;
     font-size: 32px; 
 }
 
 .main-text h2{
-    color: #381715;
-    font-family: 'Merienda', cursive;
+    color: #9370DB;
+    
     margin-bottom: 40px;
     text-align: center;
     font-size: 32px; 
@@ -566,7 +566,7 @@ body {
 }
 
 .card-content .price {
-    color: #7a3d3c;
+    color: black;
     font-size: 1.25rem;
     font-weight: bold;
 }
@@ -574,7 +574,7 @@ body {
 .card-content a {
     display: block;
     text-align: center;
-    background-color: #7a3d3c;
+    background-color: #9370DB;
     color: white;
     padding: 0.75rem 1rem;
     border-radius: 5px;
@@ -584,7 +584,7 @@ body {
 }
 
 .card-content a:hover {
-    background-color: #5b2e2d;
+    background-color: #9370DB;
 }
 
 /*Mensajes*/
@@ -611,7 +611,7 @@ body {
 .container .mensaje-header h2 {
     color:  #9370DB;
     text-align: center;
-    font-family: 'Merienda', cursive;
+  
     font-size: 32px;
     margin-bottom: 40px; 
 
@@ -681,7 +681,7 @@ body {
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family: 'AbeeZee', sans-serif;
+   
     overflow: hidden;
 }
 
@@ -690,7 +690,7 @@ body {
     margin-bottom: 20px;
     color: #9370DB;
     text-align: center;
-    font-family: 'Merienda', cursive;
+    
     font-size: 32px;
 }
 
@@ -788,7 +788,7 @@ body {
 
 .titulo-direccion h1 {
     color: #9370DB;
-    font-family: 'Cormorant Garamond', serif;
+    
     font-size: 32px;
     margin-bottom: 60px;
     text-align: center; 
@@ -877,8 +877,7 @@ body {
 }
 
 .container-agregar h2 {
-    color: #9063e98f; 
-    font-family: 'Merienda', cursive;
+    color: #9370DB; 
     margin-bottom: 40px;
     text-align: center;
     font-size: 32px;
@@ -941,8 +940,8 @@ form .custom-file-label {
 }
 
 .container-editar h2 {
-    color: #9063e98f;
-    font-family: 'Merienda', cursive;
+    color: #9370DB;
+   
     margin-bottom: 40px;
     text-align: center;
     font-size: 32px;
@@ -1004,8 +1003,7 @@ form .custom-file-label {
 }
 
 .container-eliminar h2 {
-    color: #9063e98f;
-    font-family: 'Merienda', cursive;
+    color: #9370DB;
     margin-bottom: 40px;
     font-size: 32px;
 }
@@ -1035,3 +1033,156 @@ form .custom-file-label {
         margin-right: 20px;
     }
 }
+
+/*-----------------home bienvenido----------------*/
+section{
+    padding: 45px 10% 20px;
+}
+
+.home {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    height: 37rem;
+    background-size: cover;
+    background-position: center;
+}
+
+.home-text{
+    animation: mover-izquierda-derecha 2s 1;
+    animation-fill-mode: forwards;
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.home-text h1{
+    color: white;
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    line-height: 1.0;
+}
+
+.home-text p{
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 30rem; 
+}
+
+@keyframes mover-izquierda-derecha  {
+    from{
+        transform: translateX(-100px);
+    }
+    to{
+        transform: translateX(5px);
+    }   
+}
+/*---------------------  CATEGORIAS ----------------------------*/
+.heading-1{
+    text-align: center;
+    font-weight: 500;
+    font-size: 3rem;
+    color: #9370DB;
+    font-weight: bold;
+}
+
+.carousel-inner{
+    border-radius: 0px;
+    
+    background-color: transparent;
+}
+
+.top-categoria{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem ;
+    font-family: "Merienda";
+}
+
+.container-categorias{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+}
+
+.div_categoria{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-width: 0px;
+    border-color: rgb(161, 128, 82);
+    padding: 50px;
+    width: 100%;
+}
+
+.card-category{
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    gap: 2rem;
+} 
+
+.category-torta{
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.category-alfajor{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.category-cupcake{
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-category p{
+    font-size: 2.5rem;
+    color: #fff;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.card-category p::after{
+    content: '';
+    width: 2.5rem;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translate(-50%,50%);
+}
+.card-category a{
+    font-size: 1.6rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.card-category a:hover{
+    color:#7e4383;
+}
+/*---------------------------------*/
+
+
+
+
+
+
+
