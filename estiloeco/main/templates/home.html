@@ -3,25 +3,48 @@
 {% block content %}
     
 
-<section class="hero">
-    <h1>Bienvenido a Estilo Eco</h1>
-    <p>Lorem ipsum es simplemente el texto de relleno de las imprentas y archivos de texto...</p>
-</section>
-
-<section class="categories">
-    <h2>Categoría</h2>
-    <div class="category-grid">
-        <a href="{% url 'textiles' %}"><div class="category-item">Textiles</div></a>
-        <a href="{% url 'manualidades' %}"><div class="category-item">Manualidades</div></a>
-        <a href="{% url 'insumos' %}"><div class="category-item">Insumos</div></a>
+<section class="home" style="background-image: linear-gradient(100deg,#000000,#00000020), url('{% static 'img/fondo.jpg' %}')">
+    <div class="home-text">
+        <h1><Estilo>Bienvenidos a <br> Estilo Eco</h1>
+        <p> Donde la tradición y la creatividad se unen para dar vida a piezas únicas y auténticas. Somos un equipo de artesanos apasionados que valoramos la belleza de lo hecho a mano y el legado cultural que cada obra representa.
+            Desde nuestros inicios, nos hemos dedicado a crear productos artesanales de alta calidad, utilizando técnicas ancestrales y materiales locales. Cada pieza que elaboramos es el resultado de horas de dedicación, paciencia y amor por el arte, lo que garantiza su originalidad y durabilidad.
+            Nuestro objetivo es ofrecer a nuestros clientes no solo un producto, sino una experiencia. Queremos que cada artículo que adquieras de Estilo Eco cuente una historia, ya sea un recuerdo de un lugar especial, un regalo significativo para un ser querido, o un elemento que añada un toque especial a tu hogar. 
+        </p>      
     </div>
 </section>
 
-<section class="carousel">
-    <h2>Carrusel de Imágenes</h2>
-    <!-- Aquí puedes agregar un carrusel de imágenes -->
-</section>
+
+
+
+
+<div class="container div_categoria">
+    <section class="container top-categoria">
+        <h1 class="heading-1">Categorías</h1>
+        <div class="container-categorias">
+            <div class="card-category category-torta" style="background-image: linear-gradient(#00000080, #00000080), url('{% static 'img/textiles.jpg' %}')">
+                <p>Textiles</p>
+                <a href="{% url 'textiles' %}">Ver más</a>   
+            </div>
+            <div class="card-category category-alfajor" style="background-image: linear-gradient(#00000080, #00000080), url('{% static 'img/manualidades.jpg' %}')">
+                <p>Manualidades</p>
+                <a href="{% url 'manualidades' %}">Ver más</a>
+            </div>
+            <div class="card-category category-cupcake" style="background-image: linear-gradient(#00000080, #00000080), url('{% static 'img/insumos.jpg' %}')">
+                <p>Insumos</p>
+                <a href="{% url 'insumos' %}">Ver más</a>   
+            </div> 
+        </div>
+    </section>
+</div>
+
+
+
+
+
 
 {% endblock %}
 
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+{% endblock %}
 
