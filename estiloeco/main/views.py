@@ -25,7 +25,7 @@ def register(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('index')
+            return redirect('home')
     else:
         form = CustomUserCreationForm()
     return render(request, 'registration/register.html', {'form': form})
