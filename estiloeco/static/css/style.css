@@ -92,6 +92,11 @@ body {
     
 }
 
+.search-nav{
+    font-size: 20px;
+    border-radius: 4rem;
+    border-width: 0px;
+}
 
 /*footer*/
 

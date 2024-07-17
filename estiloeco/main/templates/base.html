@@ -21,7 +21,14 @@
                 <li><a href="">Mensajes</a></li> 
             </ul>           
         </nav>
-        <a class="btn" href="{% url 'login' %}"><button>Iniciar Sesion</button></a>
+        <form class="d-flex" method="get" action="{% url 'buscar_productos' %}">
+          <input class="search-nav" type="search" name="q" placeholder=" Buscar">
+        </form>
+        {% if request.user.is_authenticated %}
+          <a class="btn" href="{% url 'exit' %}"><button>Cerrar Sesion</button></a>
+        {% else %}
+          <a class="btn" href="{% url 'login' %}"><button>Iniciar Sesion</button></a>
+        {% endif %}
     </header>
 
    {% block content %}
