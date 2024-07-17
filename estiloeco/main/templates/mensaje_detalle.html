@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} Detalle del Mensaje {% endblock %}
+
+{% block content %}
+<div class="container-message">
+    <h2 style="text-align: center;">Detalle del Mensaje</h2>
+    <div class="message-detail">
+        <p><strong>Nombre:</strong> {{ mensaje.nombre }}</p>
+        <p><strong>Email:</strong> {{ mensaje.email }}</p>
+        <p><strong>Asunto:</strong><span class="message-content">{{ mensaje.asunto }}</span></p>
+        <p><strong>Mensaje:</strong> <span class="message-content">{{ mensaje.mensaje }}</span></p>
+        <p><strong>Fecha de Envío:</strong> {{ mensaje.fecha_envio }}</p>
+    </div>
+    <div class="actions">
+        <a href="{% url 'mensajes' %}" class="btn btn-primary">Volver a la lista de mensajes</a>
+        <form method="post" action="{% url 'eliminar_mensaje' mensaje.id %}" class="delete-form" onsubmit="return confirm('¿Estás seguro de que deseas eliminar este mensaje?');">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Eliminar Mensaje</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

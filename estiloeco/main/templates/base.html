@@ -18,8 +18,10 @@
                 <li><a href="{% url 'productos' %}">Productos</a></li>
                 <li><a href="{% url 'contacto' %}">Contáctanos</a></li>
                 <li><a href="{% url 'horario' %}">Horario</a></li>
-                <li><a href="">Mensajes</a></li> 
-            </ul>           
+                <li><a href="{% url 'mensajes' %}">Mensajes</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+            </ul>
+            <input type="search" placeholder="buscar">
         </nav>
         <form class="d-flex" method="get" action="{% url 'buscar_productos' %}">
           <input class="search-nav" type="search" name="q" placeholder=" Buscar">

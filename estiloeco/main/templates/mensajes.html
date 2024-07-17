@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} Mensajes {% endblock %}
+
+{% block content %}
+<div class="boss">
+    <div class="container">
+        <div class="mensaje-header">
+            <h2>Mensajes Recibidos</h2>
+        </div>
+        <ul class="message-list">
+            {% for mensaje in mensajes %}
+                <li class="message-item">
+                    <a href="{% url 'mensaje_detalle' mensaje.id %}">
+                        <strong>{{ mensaje.nombre }}</strong> - {{ mensaje.asunto }} ({{ mensaje.fecha_envio }})
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>    
+</div>
+{% endblock %}
