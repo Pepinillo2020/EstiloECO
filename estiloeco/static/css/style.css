@@ -733,19 +733,6 @@ body {
     display: inline-block;
 }
 
-.actions .btn-danger {
-    background-color: #9370DB;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.actions .btn-danger:hover {
-    background-color: #9063e98f;
-}
 
 .actions .btn-primary {
     background-color: #9370DB;
@@ -867,4 +854,184 @@ body {
     overflow: hidden; 
     border-radius: 8px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+/*Agregar Producto*/
+
+.agregar-producto-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container-agregar {
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-agregar h2 {
+    color: #9063e98f; 
+    font-family: 'Merienda', cursive;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 32px;
+}
+
+form .form-group {
+    margin-bottom: 20px;
+}
+
+form .form-control {
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    width: 100%;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #555;
+}
+
+form .btn {
+    background-color: #9370DB; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+form .btn:hover {
+    background-color: #9063e98f;
+}
+
+form .custom-file-label {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.alert {
+    margin-bottom: 20px;
+}
+
+/*Editar Producto*/
+
+.container-editar {
+    background-color: white;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;       
+}
+
+.container-editar h2 {
+    color: #9063e98f;
+    font-family: 'Merienda', cursive;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 32px;
+}
+
+.editar {
+    margin: 50px auto;
+}
+
+
+@media (min-width: 1200px) {
+    .container-editar {
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+
+    .editar {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .container-editar {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .editar {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .container-editar {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .editar {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+
+/*Eliminar Producto*/
+
+.container-eliminar {
+    background-color: white;
+    text-align: center; 
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;    
+}
+
+.container-eliminar h2 {
+    color: #9063e98f;
+    font-family: 'Merienda', cursive;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.eliminar {
+    margin: 50px auto;
+}
+
+
+@media (min-width: 1200px) {
+    .container-eliminar {
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .container-eliminar {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container-eliminar {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 }
